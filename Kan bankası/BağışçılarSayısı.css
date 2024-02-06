@@ -1,0 +1,31 @@
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}

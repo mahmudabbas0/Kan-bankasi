@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bagisçiekle1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Bagişçi Ekle</title>   
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="anasayfa.html">Anasayfa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  href="bagşçiekle1.html">Bagışçı Ekle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="bagisciler.html">Bağışçılar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="bagışçılarSayısı.html">Kan Stoğu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="iletisim.html">iletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="girişYap.html">Cıkış Yap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+   <section class="container">
+    <header>Bagişçi Ekleme</header>
+    
+    <form action="" class="form" id="infoForm">
+
+        <div class="column">
+            
+            <div class="input-box">
+                <label for="Name">Ad</label>
+                <input type="text" 
+                id="Name" name="Name" placeholder="Ad" required>
+    
+            </div>
+    
+            <div class="input-box">
+                <label for="fatherName">Baba Adi</label>
+                <input type="text" 
+                id="fatherName" name="fatherName" placeholder="Baba Adi" required>
+    
+            </div>
+        </div>
+      
+        <div class="column">
+            <div class="input-box">
+                <label for="motherName">Anne Adi</label>
+                <input type="text" 
+                id="motherName" name="motherName" placeholder="Anne Adi" required>
+    
+            </div>
+    
+            <div class="input-box">
+              <label for="Date">Dogum Tarihi</label>
+              <input type="date" 
+              id="Date" name="Date" placeholder="dogumTarihi" required>
+    
+          </div>
+        </div>
+
+       
+         <div class="column">
+            
+        <div class="input-box">
+            <label for="PhoneNumber">Phone Number</label>
+            <input type="number" 
+            id="PhoneNumber" name="PhoneNumber" placeholder="Enter PhoneNumber"  required>
+
+        </div>
+
+        <div class="input-box">
+            <label for="Email">email</label>
+            <input type="email" 
+            id="Email" name="Email" placeholder="Email" required >
+  
+        </div>
+         </div>
+       
+         
+            <div class="user-input-box">
+                <label for="Gender"> Cinsiyet</label>
+                <select name="Gender" id="Gender" required>
+                  <option value="Erkek">Cinsiyet Erkek</option>
+                  <option value="Kadin">Cinsiyet Kadin</option>
+                </select>
+    
+            </div>
+          
+                <div class="input-box">
+                  <label for="Blood">  Kan Grubu</label> 
+                  <select id="Blood" name="Blood" required>
+                    <option value="A+">kan gurubu A+</option>
+                    <option value="A-">kan gurubu A-</option>
+                    <option value="B+">kan gurubu B+</option>
+                    <option value="B-">kan gurubu B-</option>
+                    <option value="AB+">kan gurubu AB+</option>
+                    <option value="AB-">kan gurubu AB-</option>
+                    <option value="O+">kan gurubu O+</option>
+                    <option value="O-">kan gurubu O-</option>
+                  </select>
+                </div>
+    
+
+
+
+    </form>
+    <div class="button-container">
+
+      <button id="insbtn">KAYDET</button>
+      <button id="selbtn">BİLGİLERİ GÖRÜNTÜLEME</button>
+      <button id="delbtn">SİLME</button>
+      <button id="editbtn">GÜNCELLEME</button>
+    </div>
+
+   </section>
+
+
+   <script type="module" src="bagışçıekle.js">
+   </script>
+
+</body>
+</html>

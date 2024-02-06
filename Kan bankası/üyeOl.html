@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="girişYap.css">
+    <title>register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box form-box">
+            <header>Üye ol</header>
+            <form action="" method="post" id="Mainform">
+
+                <div class="filed input">
+                    <label for="text">Kullanıcı adı</label>
+                    <input type="text" name="text" id="text" autocomplete="off" required>
+                </div>
+                <br>
+
+                <div class="filed input">
+                    <label for="email">E-posta</label>
+                    <input type="email" name="email" id="email" autocomplete="off" required>
+                </div>
+                <br>
+                <div class="filed input">
+                    <label for="passowrd">Şifre</label>
+                    <input type="password" name="password" id="password" autocomplete="off" required>
+                </div>
+
+                <div class="filed input">
+                    <br>
+                    <input type="submit" class="btn" name="submit"   value="Üye ol" required>
+                </div>
+                <br>
+                <div class="links">
+                    Zaten bir üye? <a href="girişYap.html">Kayıt olmak</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+
+<script type="module" src="üyeOl.js">
+
+</script>
+</body>
+</html>

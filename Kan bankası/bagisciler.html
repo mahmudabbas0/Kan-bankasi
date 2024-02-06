@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+     <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+     <script defer src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+     <script defer src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Bağişçilar</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="anasayfa.html">Anasayfa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="bagşçiekle1.html">Bagışçı Ekle</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="bagisciler.html">Bagışçılar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="bagışçılarSayısı.html">Kan Stoğu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="iletisim.html">iletişim </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="girişYap.html"> Çıkış Yap</a>
+              </li>
+              </li>
+           
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="myinput">
+              <button class="btn btn-outline-success" type="button" onclick="searchFunction()">Arama</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+   
+
+    <div class="container">
+        <table id="example" class="table table-striped" style="width:100%">
+                <thead>
+                 <tr>
+                    <th>AD</th>
+                    <th>BabaAdi</th>
+                    <th>AnneAdi</th>
+                    <th>dogumTarihi</th>
+                    <th>Telefon</th>
+                    <th>Cinsiyet</th>
+                    <th>Email </th>
+                    <th>KanGrubu</th>
+                    
+                 </tr>
+                   
+                </thead>        
+                <tbody id="tbody1">
+
+                </tbody>   
+                
+                <tfoot>
+                    <tr>
+                        <th>AD</th>
+                        <th>BabaAdi</th>
+                        <th>AnneAdi</th>
+                        <th>dogumTarihi</th>
+                        <th>Telefon</th>
+                        <th>Cinsiyet</th>
+                        <th>Email </th>
+                        <th>KanGrubu</th>
+                      
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+       
+        <script  type="module" src="bagisciler.js">
+
+
+        </script>
+
+        <script>
+
+const searchFunction = () => {
+  let filter = document.getElementById("myinput").value.toUpperCase();
+  let myTable = document.getElementById('tbody1');
+  let tr = myTable.getElementsByTagName('tr');
+  for (var i = 0; i < tr.length; i++) {
+    let td7 = tr[i].getElementsByTagName('td')[7];
+    let td4 = tr[i].getElementsByTagName('td')[4];
+    if (td7 || td4) {
+      let textValue7 = td7 ? td7.textContent || td7.innerHTML : "";
+      let textValue4 = td4 ? td4.textContent || td4.innerHTML : "";
+      if (filter === '') {
+        tr[i].style.display = "";
+      } else if (textValue7.toUpperCase().indexOf(filter) > -1 || textValue4.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+const clearButton = document.getElementById("clearButton");
+clearButton.addEventListener("click", () => {
+  document.getElementById("myinput").value = "";
+  searchFunction(); // استدعاء الدالة لإعادة عرض جميع الصفوف
+});
+        
+     
+        </script>
+
+
+    
+    
+    
+</body>
+</html>

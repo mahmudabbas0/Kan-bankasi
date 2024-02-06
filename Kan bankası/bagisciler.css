@@ -1,0 +1,90 @@
+.container {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* لون الخلفية */
+  color: #333; /* لون النص */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* تصميم صندوق البحث وزر تبديل وضع الصفحة */
+.search-container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.search-container input[type=text] {
+  width: 200px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.toggle-mode {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.night-mode {
+background-color: #222;
+color: #fff;
+}
+
+.night-mode table {
+border-color: #fff;
+}
+
+.night-mode th {
+background-color: #333;
+color: #fff;
+}
+
+.night-mode td {
+border-bottom-color: #555;
+}
+
+.night-mode .search-container input[type=text] {
+background-color: #333;
+color: #fff;
+border-color: #555;
+}
+
+.night-mode .search-container input[type=text]:focus {
+border-color: #fff;
+}
+
+.night-mode .toggle-mode {
+background-color: #333;
+color: #fff;
+border-color:#555;
+}
+
+
+.sun-icon {
+display: none;
+}
+.night-mode .moon-icon {
+display: none;
+}
+.night-mode .sun-icon {
+display: inline-block;
+}
